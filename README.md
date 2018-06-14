@@ -4,8 +4,10 @@ Csv parser is used to manipulate a CSV File.
 
 ## Examples
 
-###Download csv-parser using Composer
+### Download csv-parser using Composer
+
 [https://packagist.org/packages/saverty/csv-parser](https://packagist.org/packages/saverty/csv-parser)
+
 ```console
 foo@bar:~$ composer require saverty/csv-parser
 ```
