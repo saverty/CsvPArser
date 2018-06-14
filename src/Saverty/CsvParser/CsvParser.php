@@ -46,6 +46,33 @@ class CsvParser{
     return $data;
   }
 
+
+  /**
+   * CSV to array rode column per colum,
+   * @return Array array
+   */
+  public function toArrayByColumn(){
+    $data = array();
+    $columns = $this->getHeaders();
+
+    $association = array();
+
+    foreach ($columns as $key => $value) {
+      $data[$value] = array();
+      array_push($association, $value);
+    }
+
+    while (($line = fgetcsv($this->file)) !== FALSE) {
+      foreach ($line as $key => $value) {
+        if(!empty($value)){
+          array_push($data[$association[$key]], $value);
+        }
+      }
+    }
+
+    return $data;
+  }
+
   /**
    * Transform CSV file in json string
    * @return JSON CSV file in json
