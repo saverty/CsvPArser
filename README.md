@@ -1,9 +1,17 @@
 # csv-parser
-Csv parser is used to manipulate a CSV File. 
+Csv parser is used to manipulate a CSV File.
 
 
 ## Examples
-### First step, include the package
+
+###Download csv-parser using Composer
+[https://packagist.org/packages/saverty/csv-parser](https://packagist.org/packages/saverty/csv-parser)
+```console
+foo@bar:~$ composer require saverty/csv-parser
+```
+
+
+###include the package
 
 ```php
 require __DIR__ . "/../vendor/autoload.php";
@@ -38,4 +46,3 @@ $object = $csv->toObject();
 $csv = new CsvParser('nlp.csv');
 $headers = $csv->getHeaders();
 ```
-
