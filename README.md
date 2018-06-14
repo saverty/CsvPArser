@@ -16,7 +16,7 @@ foo@bar:~$ composer require saverty/csv-parser
 ### include the package
 
 ```php
-require __DIR__ . "/../vendor/autoload.php";
+require __DIR__ . "/vendor/autoload.php";
 
 use Saverty\CsvParser\CsvParser;
 ```
